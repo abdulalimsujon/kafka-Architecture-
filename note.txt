@@ -1,0 +1,8 @@
+throughput : amout of data that pass
+kafka: it has high throughput. but it cannot keep data more time
+zookeeper: kapka internaly used for  balancing and mutiple replica 
+
+docker run -p 9092:9092 -e KAFKA_ZOOKEEPER_CONNECT=192.168.68.69:2181 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://192.168.68.69:9092 -e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 confluentinc/cp-kafka
+
+admin --infrac setup topic/part
+producer -- msg produce
